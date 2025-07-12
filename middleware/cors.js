@@ -1,7 +1,7 @@
 const cors = require('cors');
 
 const corsOptions = {
-  origin: 'https://web-store-server-c0dc.onrender.com',
+  origin: 'https://web-store-client-nebj.onrender.com',
   allowedHeaders: ['Content-Type', 'Authorization'],
   methods: ['GET', 'PUT', 'DELETE', 'POST', 'OPTIONS'],
   credentials: true,
