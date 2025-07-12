@@ -8,9 +8,11 @@ module.exports.isAuth = async (req, res, next) => {
       const error = new Error('Not login!');
       throw error;
     }
+    console.log(token, process.env.NODE_JWT_KEY);
 
     const userData = jwt.verify(token, process.env.NODE_JWT_KEY);
     const expiresIn = userData.exp * 1000; // jwt exp in seconds
+    console.log(userData);
 
     const user = await User.findById(userData._id);
     if (!user) {

@@ -6,8 +6,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 // Setting up .env
-// const dotenv = require('dotenv');
-// dotenv.config();
+const dotenv = require('dotenv');
+dotenv.config();
 const PORT = process.env.PORT || 5000;
 
 // Import routes
