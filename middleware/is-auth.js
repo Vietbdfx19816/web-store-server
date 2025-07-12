@@ -2,7 +2,7 @@ const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 
 module.exports.isAuth = async (req, res, next) => {
-  console.log(req);
+  console.log(req.signedCookies, process.env.NODE_JWT_KEY);
 
   try {
     const token = req.signedCookies.jwt;
