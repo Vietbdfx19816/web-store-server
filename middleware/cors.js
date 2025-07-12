@@ -1,7 +1,7 @@
 const cors = require('cors');
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'http://localhost:3001'],
+  origin: 'https://web-store-server-c0dc.onrender.com',
   allowedHeaders: ['Content-Type', 'Authorization'],
   methods: ['GET', 'PUT', 'DELETE', 'POST', 'OPTIONS'],
   credentials: true,
