@@ -2,15 +2,15 @@ const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 
 module.exports.isAuth = async (req, res, next) => {
-  console.log('auth');
+  console.log(req);
 
   try {
     const token = req.signedCookies.jwt;
+    console.log(token, process.env.NODE_JWT_KEY);
     if (!token) {
       const error = new Error('Not login!');
       throw error;
     }
-    console.log(token, process.env.NODE_JWT_KEY);
 
     const userData = jwt.verify(token, process.env.NODE_JWT_KEY);
     const expiresIn = userData.exp * 1000; // jwt exp in seconds
