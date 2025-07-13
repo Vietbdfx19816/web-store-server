@@ -94,7 +94,8 @@ module.exports.logOut = (req, res, next) => {
     .clearCookie('__session', {
       httpOnly: true,
       signed: true,
-      sameSite: 'Strict',
+      sameSite: 'None',
+      secure: true,
     })
     .json({ message: 'Logout!' });
 };
@@ -160,8 +161,9 @@ module.exports.postAdminLogin = async (req, res, next) => {
       .cookie('__session', token, {
         httpOnly: true,
         signed: true,
-        sameSite: 'Strict',
+        sameSite: 'None',
         expires,
+        secure: true,
       })
       .json({ user: userData, expires });
   } catch (err) {
