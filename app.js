@@ -58,7 +58,7 @@ getIo(httpServer);
 
 // Connect database
 mongoose
-  .connect(process.env.NODE_MONGODB_URI)
+  .connect(process.env.MONGODB_URI)
   .then(result => {
     httpServer.listen(PORT);
   })
