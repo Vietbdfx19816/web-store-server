@@ -7,7 +7,7 @@ const { isAuth, isSupport } = require('../middleware/is-auth');
 
 router.post('/signup', AuthController.signUp);
 
-router.get('/login', isAuth, AuthController.getLogin); // get user data with session store in client
+//router.get('/login', isAuth, AuthController.getLogin); // get user data with session store in client
 
 router.post('/login', AuthController.postLogin);
 

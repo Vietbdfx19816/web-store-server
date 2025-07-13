@@ -57,6 +57,7 @@ module.exports.postLogin = async (req, res, next) => {
         signed: true,
         sameSite: 'Strict',
         expires,
+        secure: true,
       })
       .json({ user: userData, expires });
   } catch (err) {
