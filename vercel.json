@@ -19,7 +19,7 @@
         "OPTIONS"
       ],
       "headers": {
-        "Access-Control-Allow-Origin": "https://apple-store-client-19816.web.app",
+        "Access-Control-Allow-Origin": "https://web-store-client-silk.vercel.app/",
         "Access-Control-Allow-Credentials": "true",
         "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
       }
