@@ -3,7 +3,7 @@ const Session = require('../models/session');
 
 module.exports.isAuth = (socket, next) => {
   try {
-    const token = socket.request.signedCookies.jwt;
+    const token = socket.request.signedCookies.__session;
 
     const userData = jwt.verify(token, process.env.NODE_JWT_KEY);
 

@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 
 module.exports.isAuth = async (req, res, next) => {
   try {
-    const token = req.signedCookies.jwt;
+    const token = req.signedCookies.__session;
     console.log(token, process.env.NODE_JWT_KEY);
     if (!token) {
       const error = new Error('Not login!');

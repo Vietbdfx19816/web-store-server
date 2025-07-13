@@ -52,7 +52,7 @@ module.exports.postLogin = async (req, res, next) => {
 
     res
       .status(200)
-      .cookie('jwt', token, {
+      .cookie('__session', token, {
         httpOnly: true,
         signed: true,
         sameSite: 'Strict',
@@ -90,7 +90,7 @@ module.exports.signUp = async (req, res, next) => {
 module.exports.logOut = (req, res, next) => {
   res
     .status(200)
-    .clearCookie('jwt', {
+    .clearCookie('__session', {
       httpOnly: true,
       signed: true,
       sameSite: 'Strict',
@@ -156,7 +156,7 @@ module.exports.postAdminLogin = async (req, res, next) => {
 
     res
       .status(200)
-      .cookie('jwt', token, {
+      .cookie('__session', token, {
         httpOnly: true,
         signed: true,
         sameSite: 'Strict',
