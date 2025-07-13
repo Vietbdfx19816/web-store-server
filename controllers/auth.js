@@ -55,7 +55,7 @@ module.exports.postLogin = async (req, res, next) => {
       .cookie('__session', token, {
         httpOnly: true,
         signed: true,
-        sameSite: 'Strict',
+        sameSite: 'None',
         expires,
         secure: true,
       })
