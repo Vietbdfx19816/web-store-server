@@ -6,6 +6,7 @@ const corsOptions = {
     'https://apple-store-client-19816.web.app',
   ],
   allowedHeaders: ['Content-Type', 'Authorization'],
+  exposedHeaders: ['Set-Cookie'],
   methods: ['GET', 'PUT', 'DELETE', 'POST', 'OPTIONS'],
   credentials: true,
 };
