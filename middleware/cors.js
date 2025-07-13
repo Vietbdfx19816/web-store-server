@@ -1,7 +1,7 @@
 const cors = require('cors');
 
 const corsOptions = {
-  origin: 'https://web-store-client-silk.vercel.app/',
+  origin: 'https://web-store-client-silk.vercel.app',
 
   allowedHeaders: ['Content-Type', 'Authorization'],
   exposedHeaders: ['Set-Cookie'],
