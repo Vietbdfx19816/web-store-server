@@ -1,7 +1,10 @@
 const cors = require('cors');
 
 const corsOptions = {
-  origin: 'https://web-store-client-nebj.onrender.com',
+  origin: [
+    'https://web-store-client-nebj.onrender.com',
+    'https://apple-store-client-19816.web.app',
+  ],
   allowedHeaders: ['Content-Type', 'Authorization'],
   methods: ['GET', 'PUT', 'DELETE', 'POST', 'OPTIONS'],
   credentials: true,
