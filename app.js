@@ -30,6 +30,7 @@ const httpServer = createServer(app);
 // Setting cors
 
 app.use(cors(corsOptions));
+app.options('*', cors());
 
 // Public folder
 app.use('/images', express.static(join(__dirname, 'public', 'images')));
